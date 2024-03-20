@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
     createGrid(16);
-    getSize();
     console.log("working");
 })
 
@@ -20,10 +19,15 @@ function createGrid(size){
 }
 
 function getSize(){
-    //assign this to the button
     let input = prompt("choose a size of the grid")
-    let error = document.querySelector("#error message")
+    let message = document.querySelector("#message")
     if(input === ""){
-
+        message.innerHTML = "Please enter a number";
     }
-}
+    else if(input < 0 || input > 100){
+        message.innerHTML = "Please enter a number between 1 and 100"
+    }
+    else{
+        message.innerHTML = "Lets draw"
+    }
+    }
