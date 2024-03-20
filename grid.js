@@ -35,10 +35,13 @@ function getSize(){
     }
     }
     function colorDiv(){
-        if(colorChoice == "random"){
-            this
+        if(color == "random"){
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        }
+        else{
+            this.style.backgroundColor = "black";
         }
     }
     function setColor(colorChoice){
-        let color = colorChoice;
+        color = colorChoice;
     }
