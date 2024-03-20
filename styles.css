@@ -11,7 +11,6 @@ transition: 0.3s;
 display: inline-block;
 cursor: pointer;
 border-radius: 8px;}
-
 .color, .erase, .black{
     border: none;
     background-color: black;
@@ -33,3 +32,24 @@ border-radius: 8px;}
     background-color: magenta;}
 .black:hover {
     background-color: grey;}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+    justify-content: space-around;}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+    align-items: center;}
+.container{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;}
