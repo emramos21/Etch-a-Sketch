@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(){
     createGrid(16);
-    console.log("working");
+    let popup = document.querySelector("#popup");
+    popup.addEventListener("click", function(){
+        let size = getSize();
+        createGrid(size);
+    });
 })
 
 function createGrid(size){
@@ -9,7 +13,6 @@ function createGrid(size){
     //are assigning it to a variable in JS
     container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-
     let numberDivs = size * size;
     for(let i = 0; i < numberDivs; i++){
         let div = document.createElement("div")
@@ -29,5 +32,6 @@ function getSize(){
     }
     else{
         message.innerHTML = "Lets draw"
+        return input;
     }
     }
