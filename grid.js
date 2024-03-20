@@ -1,6 +1,19 @@
 let color = "black";
+let click = false;
 document.addEventListener("DOMContentLoaded", function(){
     createGrid(16);
+    document.querySelector("body").addEventListener("click", function(startDrawing){
+        if(startDrawing.tagName != "BUTTON"){
+            click = !click;
+            let draw = document.querySelector("#draw");
+            if(click){
+                draw.innerHTML = "You are drawing";
+            }
+            else{
+                draw.innerHTML = "Not Drawing";
+            }
+        }
+    })
     let popup = document.querySelector("#popup");
     popup.addEventListener("click", function(){
         let size = getSize();
@@ -35,13 +48,15 @@ function getSize(){
     }
     }
     function colorDiv(){
-        if(color == "random"){
-            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-        }
-        else{
-            this.style.backgroundColor = "black";
-        }
+        if(click){
+            if(color == "random"){
+                this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            }
+            else{
+                this.style.backgroundColor = 'black';
+            }
     }
+}
     function setColor(colorChoice){
         color = colorChoice;
     }
