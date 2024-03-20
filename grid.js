@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     createGrid(16);
+    getSize();
     console.log("working");
 })
 
@@ -16,4 +17,13 @@ function createGrid(size){
         div.style.backgroundColor = "red";
         container.insertAdjacentElement("beforeend", div);
         }
+}
+
+function getSize(){
+    //assign this to the button
+    let input = prompt("choose a size of the grid")
+    let error = document.querySelector("#error message")
+    if(input === ""){
+
+    }
 }
