@@ -16,7 +16,9 @@ function createGrid(size){
     let numberDivs = size * size;
     for(let i = 0; i < numberDivs; i++){
         let div = document.createElement("div")
-        div.style.backgroundColor = "red";
+        div.addEventListener("mouseover", function(){
+            div.style.backgroundColor = "black";
+        })
         container.insertAdjacentElement("beforeend", div);
         }
 }
