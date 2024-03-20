@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
             click = !click;
             let draw = document.querySelector("#draw");
             if(click){
-                draw.innerHTML = "You are drawing";
+                draw.innerHTML = "Drawing";
             }
             else{
                 draw.innerHTML = "Not Drawing";
