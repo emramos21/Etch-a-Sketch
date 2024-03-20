@@ -1,3 +1,4 @@
+let color = "black";
 document.addEventListener("DOMContentLoaded", function(){
     createGrid(16);
     let popup = document.querySelector("#popup");
@@ -6,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function(){
         createGrid(size);
     });
 })
-
 function createGrid(size){
     const container = document.querySelector(".container");
     //the above code is allowing us to select only the grid and we
@@ -16,13 +16,10 @@ function createGrid(size){
     let numberDivs = size * size;
     for(let i = 0; i < numberDivs; i++){
         let div = document.createElement("div")
-        div.addEventListener("mouseover", function(){
-            div.style.backgroundColor = "black";
-        })
+        div.addEventListener("mouseover", colorDiv)
         container.insertAdjacentElement("beforeend", div);
         }
 }
-
 function getSize(){
     let input = prompt("choose a size of the grid")
     let message = document.querySelector("#message")
@@ -36,4 +33,12 @@ function getSize(){
         message.innerHTML = "Lets draw"
         return input;
     }
+    }
+    function colorDiv(){
+        if(colorChoice == "random"){
+            this
+        }
+    }
+    function setColor(colorChoice){
+        let color = colorChoice;
     }
